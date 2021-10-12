@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel = "stylesheet" href = "final_web.css">
+    <title>WebChat</title>
+</head>
+<body>
+    <div class = "main-page flex flex-row bg-gray-700 w-full h-screen" id = "main-page">
+        <div class = "left-bar bg-black w-24 ml-4 mt-8 cursor-pointer flex flex-col" id = "left-bar">
+            <div class = "group-chats-icon" id = "group-chats-icon" title = "Group Chats">
+                <img src="https://cdn.discordapp.com/attachments/843832911412330576/878505473844846632/People_button-removebg-preview.png" height = "60" width = "60">
+            </div>
+            <div class = "personal-chats-icon" id = "personal-chats-icon" title = "Personal Chats">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                </svg>
+            </div>
+            <div class = "favourites-icon" id = "favourites-icon" title = "Favourites">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+            </div>
+            <div class = "call-icon" id = "call-icon" title = "Call">
+                <img src = "https://cdn.discordapp.com/attachments/843832911412330576/878505335109845052/Hang_up_button-removebg-preview.png" height = "55" width = "55">
+            </div>
+            <div class = "settings-icon" id = "settings-icon" title = "Settings">
+                <img src="https://cdn.discordapp.com/attachments/843832911412330576/878505440483377182/Settings_icon-removebg-preview.png" height = "42" width = "42">
+            </div>
+        </div>
+        <div class = "chat-area flex-col bg-blue-900 w-6/12 mt-8 shadow-2xl ml-6" id = "chat-area">
+            <div class = "message-top-bar flex flex-row bg-black h-16 cursor-pointer" id = "message-top-bar">
+                <div class = "colors-box flex flex-row" id = "colors-box">
+                    <div class = "add-theme bg-black font-bold text-white pt-0.5 pl-0.5" id = "add-theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                          </svg>
+                    </div>
+                    <div class = "blue-color bg-blue-900" id = "blue-color"></div>
+                    <div class = "red-color bg-red-600" id = "red-color"></div>
+                    <div class = "green-color bg-green-700" id = "green-color"></div>
+                    <div class = "yellow-color bg-yellow-500" id = "yellow-color"></div>
+                    <div class = "purple-color bg-purple-700" id = "purple-color"></div>
+                    <div class = "pink-color bg-pink-600" id = "pink-color"></div>
+                </div>
+            </div>
+            <div class = "message-area overflow-y-scroll w-full" id = "message-area" style = "height : 535px ;">
+                <div class = "setting-change" id = "setting-change">You are the admin now.</div>
+                <div class = "text-divs" id = "text-divs">Hello World</div>
+            </div>
+            <div class = "writing-area flex flex-row h-20" id = "writing-area">
+                <div class = "message flex flex-row w-11/12 mt-6 ml-10 mr-10" id = "message">
+                    <input class = "enter-message h-10 w-11/12 bg-black text-white focus:outline-none px-4 font-sans text-md" id = "enter-message" name = "enter-message" type = "text" placeholder = "Enter a message...">
+                    <button class = "send-message bg-black text-blue-300 w-10 h-10 pl-1" id = "send-message">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class = "right-bar w-4/12 mt-8 ml-12" id = "right-bar" style = "height : 685px ;">
+            <div class = "search-bar flex flex-row w-full py-4 pl-8" id = "search-bar">
+                <input class = "search-input h-10 w-10/12 bg-black text-white focus:outline-none px-4 font-sans text-md" id = "search-input" name = "search-input" type = "text" placeholder = "Search...">
+                <button class = "search-btn bg-black text-blue-300 w-10 h-10 pl-1" id = "search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+            <div class = "right-tool-bar bg-gray-900 w-full h-14 pt-2" id = "right-tool-bar">
+                <div class = "toggle-group-chat ml-auto bg-white w-10 h-10 pt-2.5 pl-2 mr-4 cursor-pointer" id = "toggle-group-chat">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                </div>
+            </div>
+
+            <div class = "group-chat-area bg-black w-full" id = "group-chat-area">
+                <div class = "group-chats-container w-full bg-black overflow-y-scroll" id = "group-chats-container">
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                    <div class = "group bg-black text-white px-12 border-2 border-white border-r-0 py-6 cursor-pointer" id = "group">Group-1</div>
+                </div>
+                <div class = "group-chat-control w-full bg-gray-900" id = "group-chat-control"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "final_web.js"></script>
+</html>

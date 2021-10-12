@@ -1,0 +1,303 @@
+.chat-area {
+    height : 680px ;
+    border-radius : 20px ;
+    border : 1px solid black ;
+    box-shadow : 0 6px 6px 0 rgba(0, 0, 0, 0.9), 0 10px 10px 0 rgba(0, 0, 0, 0.3) ;
+}
+
+.chat-area:hover {
+    transform : scale(1.01, 1.01) ;
+}
+
+.left-bar {
+    height : 685px ;
+    border-radius : 20px ;
+    /* border : 0.2px solid white ; */
+}
+
+/* .left-bar:hover {
+    transform : scale(1.01, 1.01) ;
+} */
+
+.message-top-bar {
+    border-top-right-radius : 20px ;
+    border-top-left-radius : 20px ;
+    /* box-shadow : 0 2px 2px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.3) ; */
+}
+
+.writing-area {
+    background : rgb(8, 8, 155) ;
+    border-bottom-left-radius : 20px ;
+    border-bottom-right-radius : 20px ;
+    box-shadow : 0 2px 2px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.3) ;
+}
+
+.enter-message {
+    border : 1px solid white ;
+    border-top-left-radius : 25px ;
+    border-bottom-left-radius : 25px ;
+}
+
+.send-message {
+    border-top-right-radius : 25px ;
+    border-bottom-right-radius : 25px ;
+    border : 1px solid white ;
+}
+
+/* blue message - rgb(1, 1, 66) */ 
+/* red message - rgb(88, 1, 1) */ 
+/* green message - rgb(13, 49, 13) */ 
+/* yellow message - rgb(153, 90, 14) */ 
+/* purple message - rgb(37, 32, 66) */ 
+/* pink message - rgb(114, 5, 81) */ 
+
+.text-divs {
+    /* background-color : rgb(1, 1, 66) ;  */
+    color : white ; 
+    margin-left : auto ;
+    margin-right : 20px ;
+    margin-top : 2px ; 
+    margin-bottom : 10px ;
+    width: fit-content;
+    padding : 8px 20px ; 
+    border-radius : 25px ;
+    text-align : center ;
+    justify-content : center ;
+    border : 1px solid white ; 
+} 
+
+.text-divs:hover {
+    cursor : pointer ;
+}
+
+.setting-change {
+    background-color : rgb(41, 44, 46) ;
+    color : white ;
+    border-radius : 10px ;
+    border : none;
+    width : fit-content ;
+    padding : 10px ;
+    display : flex ;
+    justify-content : center ; 
+    justify-self : center ; 
+    margin : 10px auto ;
+}
+
+.message-area::-webkit-scrollbar {
+    width : 8px ;
+}
+
+.message-area::-webkit-scrollbar-track {
+    background : rgb(117, 116, 116) ;
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+.message-area::-webkit-scrollbar-thumb {
+    background : black ; 
+    border-radius : 10px ;
+}
+
+/* .message-area::-webkit-scrollbar-thumb:hover {
+    background : rgb(2, 2, 44) ; 
+} */
+
+.colors-box {
+    margin-top : 18px ;
+    margin-left : auto ; 
+    margin-right : 12px ;
+}
+
+.blue-color, .red-color, .green-color, .yellow-color, .purple-color, .pink-color, .add-theme {
+    width : 30px ;
+    height : 30px ;
+    border : 4px solid white ;
+    border-radius : 50% ;
+    margin-left : 4px ;
+    margin-right : 4px ;
+}
+
+.blue-color:hover, .red-color:hover, .green-color:hover, .yellow-color:hover, .purple-color:hover,
+.pink-color:hover, .add-theme:hover {
+    transform : scale(1.05, 1.05) ;
+}
+
+/* blue message - rgb(1, 1, 66) */ 
+/* red message - rgb(88, 1, 1) */ 
+/* green message - rgb(13, 49, 13) */ 
+/* yellow message - rgb(153, 90, 14) */ 
+/* purple message - rgb(37, 32, 66) */ 
+/* pink message - rgb(114, 5, 81) */ 
+
+/* ----------- Red Theme --------------- */
+.chat-area-red-theme {
+    background : rgb(220, 38, 38) ;  /* bg-red-600 */
+}
+.writing-area-red-theme {
+    background : rgb(153, 27, 27) ; /* bg-red-800 */
+}
+.send-message-red-theme {
+    color : rgb(248, 113, 113) ; /* bg-red-400 */
+}
+.text-divs-red-theme {
+    background : rgb(88, 1, 1) ;
+}
+
+/* ----------- Blue Theme --------------- */
+.chat-area-blue-theme {
+    background : rgb(30, 58, 138) ; /* bg-blue-900 */
+}
+.writing-area-blue-theme {
+    background : rgb(8, 8, 155) ; /* our-choice */ 
+}
+.send-message-blue-theme {
+    color : rgb(147, 197, 253) ; /* bg-blue-300 */
+}
+.text-divs-blue-theme {
+    background : rgb(1, 1, 66) ;
+}
+
+/* ----------- Green Theme --------------- */
+.chat-area-green-theme {
+    background : rgb(4, 120, 87) ; /* bg-green-700 */
+}
+.writing-area-green-theme {
+    background : rgb(6, 78, 59) ; /* bg-green-900 */
+}
+.send-message-green-theme {
+    color : rgb(52, 211, 153) ; /* bg-green-400 */
+}
+.text-divs-green-theme {
+    background : rgb(13, 49, 13) ;
+}
+
+/* ----------- Yellow Theme --------------- */
+.chat-area-yellow-theme {
+    background : rgb(245, 158, 11) ; /* bg-yellow-500 */
+}
+.writing-area-yellow-theme {
+    background : rgb(180, 83, 9) ; /* bg-yellow-700 */
+}
+.send-message-yellow-theme {
+    color : rgb(253, 230, 138) ; /* bg-yellow-200 */
+}
+.text-divs-yellow-theme {
+    background : rgb(153, 90, 14) ;
+}
+
+/* ----------- Purple Theme --------------- */
+.chat-area-purple-theme {
+    background : rgb(109, 40, 217) ; /* bg-purple-700 */
+}
+.writing-area-purple-theme {
+    background : rgb(76, 29, 149) ; /* bg-purple-900 */
+}
+.send-message-purple-theme {
+    color : rgb(167, 139, 250) ; /* bg-purple-400 */
+}
+.text-divs-purple-theme {
+    background : rgb(37, 32, 66) ;
+}
+
+/* ----------- Pink Theme --------------- */
+.chat-area-pink-theme {
+    background : rgb(219, 39, 119) ; /* bg-pink-600 */
+}
+.writing-area-pink-theme {
+    background : rgb(157, 23, 77) ; /* bg-pink-800 */
+}
+.send-message-pink-theme {
+    color : rgb(244, 114, 182) ; /* bg-pink-400 */
+}
+.text-divs-pink-theme {
+    background : rgb(114, 5, 81) ;
+}
+
+.group-chats-icon, .personal-chats-icon, .favourites-icon, .call-icon, .settings-icon {
+    background : white ;
+    width : 64px ;
+    height : 56px ;
+    margin-top : 20px ;
+    margin-left : 16px ;
+    display : flex ;
+    justify-items : center ; 
+    justify-content : center ;
+    align-items : center ;
+    align-content : center ;
+    border-radius : 15px ;
+    border : 5px solid blue ;
+}
+
+.settings-icon {
+    margin-top : auto ;
+    margin-bottom : 25px ;
+}
+
+.group-chats-icon:hover, .personal-chats-icon:hover, .favourites-icon:hover, .call-icon:hover, .settings-icon:hover {
+    transform : scale(1.05, 1.05) ;
+}
+
+.right-bar {
+    border-radius : 20px ;
+    /* background : rgb(1, 1, 90) ; */
+}
+
+.right-bar:hover {
+    transform : scale(1.01, 1.01) ;
+}
+
+.search-bar {
+    background : rgb(1, 1, 90) ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.search-input {
+    border-top-left-radius : 20px ;
+    border-bottom-left-radius : 20px ;
+}
+
+.search-btn {
+    border-top-right-radius : 20px ;
+    border-bottom-right-radius : 20px ;
+}
+
+.group-chat-area {
+    height : 555px ;
+    border-bottom-left-radius : 20px ;
+    border-bottom-right-radius : 20px ;
+}
+
+.group-chats-container {
+    height : 490px ;
+}
+
+.group-chats-container::-webkit-scrollbar {
+    width : 6px ;
+}
+
+.group-chats-container::-webkit-scrollbar-track {
+    background : white ;
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+.group-chats-container::-webkit-scrollbar-thumb {
+    background : blue ; 
+    border-radius : 10px ;
+}
+
+.group-chats-container::-webkit-scrollbar-thumb:hover {
+    background : rgb(0, 0, 99) ; 
+    border-radius : 10px ;
+}
+
+.group-chat-control {
+    height : 65px ;
+    border-bottom-left-radius : 20px ;
+    border-bottom-right-radius : 20px ;
+}
+
+.toggle-group-chat {
+    border-radius : 50% ;
+}
